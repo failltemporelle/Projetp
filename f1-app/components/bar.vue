@@ -11,9 +11,9 @@
                 </label>
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Homepage</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>About</a></li>
+                    <li><a>Pilotes</a></li>
+                    <li><a>Ecuries</a></li>
+                    <li><a>Courses</a></li>
                 </ul>
             </div>
         </div>

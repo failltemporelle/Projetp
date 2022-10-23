@@ -3,25 +3,16 @@
   <div>
     <button class="btn" @click="getpoints()">Points</button>
 
-    <div class="flex flex-row flex-wrap place-content-center">
-      <div v-for="item in this.f1.driver" class="card w-96 bg-base-100 shadow-xl ml-6 mt-6">
-        <div class="card-body">
-          <p>Name : {{item.familyName}}</p>
-          <p>Give Name : {{item.givenName}}</p>
-          <p> Number : {{item.permanentNumber}}</p>
-        </div>
-      </div>
-    </div>
+   
   </div>
   <div>
-
     <div class="flex flex-row flex-wrap place-content-center">
       <div v-for="item in this.f1.points" class="card w-96 bg-base-100 shadow-xl ml-6 mt-6">
         <div class="card-body">
-          <p> Points: {{item.points}}</p>
-          <p> Name: {{item.Driver.familyName}}</p>
-          <p> Prénom: {{item.Driver.givenName}}</p>
-          <p> Position: {{item.position}}</p>
+          <p> Points: {{ item.points }}</p>
+          <p class ="font-bold">{{ item.Driver.givenName }} {{item.Driver.familyName}}</p>
+          <p> Position: {{ item.position }}</p>
+          <img src="/f1-app/assets/hamilton.jpg"/>
         </div>
       </div>
     </div>
@@ -54,6 +45,7 @@ export default ({
           console.log(data)
           this.f1.points = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
           console.log(this.f1.points);
+          
         })
     },
   }
