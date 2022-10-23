@@ -12,7 +12,6 @@
           <p> Points: {{ item.points }}</p>
           <p class ="font-bold">{{ item.Driver.givenName }} {{item.Driver.familyName}}</p>
           <p> Position: {{ item.position }}</p>
-          <img src="/f1-app/assets/hamilton.jpg"/>
         </div>
       </div>
     </div>
