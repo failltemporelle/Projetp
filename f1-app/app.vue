@@ -1,8 +1,7 @@
 <template>
     <bar />
     <div>
-        <button class="btn" @click="getpoints()">Points</button>
-        <button class="btn" @click="gettoken()">token</button>
+        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points</button>
     </div>
     <div>
         <div class="flex flex-row flex-wrap place-content-center">
