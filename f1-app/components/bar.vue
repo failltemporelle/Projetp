@@ -11,7 +11,7 @@
                 </label>
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Pilotes</a></li>
+                    <li><a @click="goPagePilote()">Pilotes</a></li>
                     <li><a>Ecuries</a></li>
                     <li><a>Courses</a></li>
                 </ul>
@@ -41,3 +41,19 @@
         </div>
     </div>
 </template>
+<script>
+export default ({
+    data() {
+        return {
+            f1: {
+            },
+        }
+    },
+    methods: {
+        goPagePilote (){
+            this.$router.push('/')
+        }
+        
+    }
+})
+</script>
