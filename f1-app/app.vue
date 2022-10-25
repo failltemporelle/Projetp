@@ -27,7 +27,7 @@ export default ({
     },
     methods: {
         getpoints() {
-            fetch('http://ergast.com/api/f1/2022/driverStandings.json')
+            fetch('https://ergast.com/api/f1/2022/driverStandings.json')
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
@@ -38,26 +38,26 @@ export default ({
         },
 
 
-        gettoken() {
-            fetch('https://api.pro.wizconnected.com/api/oauth/token', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        "grant_type": "client_credentials",
-                        "client_id": "client_id",
-                        "client_secret": "client_secret"
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
-                    this.f1.token = data.access_token;
-                    console.log(this.f1.token);
+        // gettoken() {
+        //     fetch('https://api.pro.wizconnected.com/api/oauth/token', {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //             },
+        //             body: JSON.stringify({
+        //                 "grant_type": "client_credentials",
+        //                 "client_id": "client_id",
+        //                 "client_secret": "client_secret"
+        //             })
+        //         })
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             console.log(data)
+        //             this.f1.token = data.access_token;
+        //             console.log(this.f1.token);
 
-                })
-        },
+        //         })
+        // },
     }
 })
 </script>
