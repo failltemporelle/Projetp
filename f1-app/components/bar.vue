@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="navbar-center">
-            <a class="btn btn-ghost normal-case text-xl">F1 Score</a>
+            <a class="btn btn-ghost normal-case text-xl">Score</a>
         </div>
         <div class="navbar-end">
             <button class="btn btn-ghost btn-circle">
