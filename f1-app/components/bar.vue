@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl">Score</a>
+      <a class="btn btn-ghost normal-case text-xl">Bienvue sur les scores de la f1</a>
     </div>
     <div class="navbar-end">
       <button class="btn btn-ghost btn-circle">
@@ -81,7 +81,7 @@ export default {
   methods: {
     goPagePilote() {
       this.$router.push({
-        name: "pilote",
+        name: "pilotes",
       });
     },
 
@@ -96,8 +96,6 @@ export default {
         name: "/",
       });
     },
-
-
   },
 };
 </script>
