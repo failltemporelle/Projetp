@@ -27,6 +27,17 @@ export default ({
         }
     },
     methods: {
+
+
+        created: function(){
+            window.location.reload();
+            this.getpoints();
+ }, 
+
+
+
+
+
         getpoints() {
             this.f1.ecuries = [];
             fetch('https://ergast.com/api/f1/2022/driverStandings.json')
@@ -38,6 +49,9 @@ export default ({
 
                 })
         },
+    }, 
+    router: {
+        base: 'pilotes'
     }
 })
 </script>
