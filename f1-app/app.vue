@@ -1,7 +1,7 @@
 <template>
     <bar />
     <div>
-        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points des pilotes</button>
+        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn " @click="getpoints()">Points des pilotes</button>
         <br>
         <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpointE()">Points des écuries</button>
 
@@ -10,9 +10,9 @@
         <div class="flex flex-row flex-wrap place-content-center">
             <div v-for="item in this.f1.points" class="card w-96 bg-base-100 shadow-xl ml-6 mt-6">
                 <div class="card-body">
-                    <p> Points: {{ item.points }}</p>
                     <p class="font-bold">{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
-                    <p> Position: {{ item.position }}</p>
+                    <p>{{ item.points }} Points</p>
+                    <p> Position au classement : {{ item.position }}</p>
                 </div>
             </div>
         </div>
@@ -22,9 +22,9 @@
         <div class="flex flex-row flex-wrap place-content-center">
             <div v-for="item in this.f1.ecuries" class="card w-96 bg-base-100 shadow-xl ml-6 mt-6">
                 <div class="card-body">
-                    <p> Points: {{ item.points }}</p>
                     <p class="font-bold">{{ item.Constructor.name }}</p>
-                    <p> Position: {{ item.position }}</p>
+                    <p> Points: {{ item.points }}</p>
+                    <p> Position au classement: {{ item.position }}</p>
                 </div>
             </div>
         </div>
@@ -43,6 +43,7 @@ export default ({
     },
     methods: {
         getpoints() {
+            this.f1.ecuries = [];
             fetch('https://ergast.com/api/f1/2022/driverStandings.json')
                 .then(response => response.json())
                 .then(data => {
@@ -56,6 +57,7 @@ export default ({
 
 
         getpointE() {
+            this.f1.points = [];
             fetch('https://ergast.com/api/f1/2022/constructorStandings.json')
                 .then(response => response.json())
                 .then(data => {
