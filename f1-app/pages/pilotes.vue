@@ -1,7 +1,9 @@
 <template>
     <bar />
     <div>
-        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points</button>
+        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points dsqfqsdfsdf</button>
+        <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpointE()">PointsEcuries</button>
+
     </div>
     <div>
         <div class="flex flex-row flex-wrap place-content-center">
@@ -34,6 +36,16 @@ export default ({
                     this.f1.points = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
                     console.log(this.f1.points);
 
+                })
+        },
+
+
+        getpointE() {
+            fetch('https://ergast.com/api/f1/2022/constructorStandings.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                   
                 })
         },
     }

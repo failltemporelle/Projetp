@@ -12,7 +12,7 @@
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><a @click="goPagePilote()">Pilotes</a></li>
-                    <li><a>Ecuries</a></li>
+                    <li><a @click="gopageecurie()">Ecuries</a></li>
                     <li><a>Courses</a></li>
                 </ul>
             </div>
@@ -52,6 +52,10 @@ export default ({
     methods: {
         goPagePilote (){
             this.$router.push('/')
+        }, 
+
+        gopageecurie(){
+            this.$router.push('/dqfsfq')
         }
         
     }
