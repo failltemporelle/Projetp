@@ -1,4 +1,5 @@
 <template>
+      <bar />
   <div>
     <button
       http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points des pilotes</button>
@@ -19,11 +20,10 @@
       </div>
     </div>
   </div>
-  <bar />
 </template>
 <script>
 export default {
-    
+
   data() {
     return {
       f1: {
