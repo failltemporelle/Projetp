@@ -1,5 +1,7 @@
 <template>
   <bar />
+  <NuxtLink to="pilotes">Pilotes</NuxtLink>
+        <NuxtLink to="ecurie">Ecuries</NuxtLink>
   <div>
     <button
       http-equiv="Content-Security-Policy"
@@ -37,12 +39,6 @@ export default {
     };
   },
   methods: {
-    created: function () {
-      window.location.reload();
-      this.getpointsE();
-    },
-
-    //force reload page
     getpointE() {
       this.f1.points = [];
       fetch("https://ergast.com/api/f1/2022/constructorStandings.json")

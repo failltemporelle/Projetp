@@ -1,5 +1,7 @@
 <template>
     <bar />
+    <NuxtLink to="pilotes">Pilotes</NuxtLink>
+        <NuxtLink to="ecurie">Ecurie</NuxtLink>
     <div>
         <button http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn " @click="getpoints()">Points des pilotes</button>
     </div>
@@ -27,17 +29,6 @@ export default ({
         }
     },
     methods: {
-
-
-        created: function(){
-            window.location.reload();
-            this.getpoints();
- }, 
-
-
-
-
-
         getpoints() {
             this.f1.ecuries = [];
             fetch('https://ergast.com/api/f1/2022/driverStandings.json')
