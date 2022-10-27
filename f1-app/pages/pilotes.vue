@@ -1,14 +1,7 @@
 <template>
-  <bar />
   <div>
     <button
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-      class="btn"
-      @click="getpoints()"
-    >
-      Points des pilotes
-    </button>
+      http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points des pilotes</button>
   </div>
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
@@ -26,16 +19,11 @@
       </div>
     </div>
   </div>
+  <bar />
 </template>
 <script>
 export default {
-
-asyncData() {
-    return {
-      rendering: process.server ? 'server' : 'client'
-    }
-  },
-
+    
   data() {
     return {
       f1: {

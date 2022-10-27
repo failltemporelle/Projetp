@@ -27,12 +27,6 @@
 </template>
 <script>
 export default {
-
-asyncData() {
-    return {
-      rendering: process.server ? 'server' : 'client'
-    }
-  },
   data() {
     return {
       f1: {
