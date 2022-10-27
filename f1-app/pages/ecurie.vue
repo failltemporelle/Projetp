@@ -1,5 +1,4 @@
 <template>
-  <bar />
   <div>
     <button
       http-equiv="Content-Security-Policy"
@@ -23,8 +22,8 @@
         </div>
       </div>
     </div>
-    <NuxtLink to="/pilotes">Pilotes</NuxtLink>
   </div>
+  <bar />
 </template>
 <script>
 export default {

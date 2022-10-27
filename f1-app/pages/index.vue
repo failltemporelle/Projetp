@@ -6,7 +6,6 @@
     </html>
     <NuxtLink to="/pilotes">Pilotes</NuxtLink>
     <NuxtLink to="/ecurie">Ecurie</NuxtLink>
-
   </div>
 </template>
 

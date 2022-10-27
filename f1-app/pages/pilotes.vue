@@ -25,8 +25,6 @@
         </div>
       </div>
     </div>
-    <NuxtLink to="/ecurie">Ecuries</NuxtLink>
-
   </div>
 </template>
 <script>
