@@ -24,6 +24,9 @@
 <script>
 export default {
 
+  created(){
+    this.getpoints()
+  },
   data() {
     return {
       f1: {
