@@ -1,16 +1,5 @@
 <template>
-
 <bar />
-  <div>
-    <button
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-      class="btn"
-      @click="getpointE()"
-    >
-      Points des écuries
-    </button>
-  </div>
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
       <div
@@ -28,10 +17,12 @@
       </div>
     </div>
   </div>
-  <footerp />
 </template>
 <script>
 export default {
+  created(){
+    this.getpointE()
+  },
   data() {
     return {
       f1: {

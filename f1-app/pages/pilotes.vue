@@ -1,16 +1,13 @@
 <template>
       <bar />
   <div>
-    <button
-      http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" class="btn" @click="getpoints()">Points des pilotes</button>
-  </div>
-  <div>
     <div class="flex flex-row flex-wrap place-content-center">
       <div
         v-for="item in this.f1.points"
         class="card w-96 bg-base-100 shadow-xl ml-6 mt-6"
       >
         <div class="card-body">
+          <p>{{item.Driver.givenName}} {{item.Driver.familyName}}</p>
           <p>{{ item.points }} Points</p>
           <p>Position au classement : {{ item.position }}</p>
           <div class="radial-progress text-primary" style="--value:100;">{{item.position}}</div>
@@ -18,7 +15,6 @@
       </div>
     </div>
   </div>
-  <footerp />
 </template>
 
 <script>
