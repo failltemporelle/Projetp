@@ -1,4 +1,6 @@
 <template>
+
+<bar />
   <div>
     <button
       http-equiv="Content-Security-Policy"
@@ -18,12 +20,15 @@
         <div class="card-body">
           <p class="font-bold">{{ item.Constructor.name }}</p>
           <p>Points: {{ item.points }}</p>
-          <p>Position au classement: {{ item.position }}</p>
+          <div class="radial-progress text-primary" style="--value:100;">{{item.position}}</div>
+          <progress class="progress w-56" value="{{item.points}}" max="700"></progress>
+          <progress class="progress w-56" value= item.points max="700"></progress>
+          <progress class="progress w-56" value="item.points" max="700"></progress>
         </div>
       </div>
     </div>
   </div>
-  <bar />
+  <footerp />
 </template>
 <script>
 export default {

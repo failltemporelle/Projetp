@@ -11,16 +11,16 @@
         class="card w-96 bg-base-100 shadow-xl ml-6 mt-6"
       >
         <div class="card-body">
-          <p class="font-bold">
-            {{ item.Driver.givenName }} {{ item.Driver.familyName }}
-          </p>
           <p>{{ item.points }} Points</p>
           <p>Position au classement : {{ item.position }}</p>
+          <div class="radial-progress text-primary" style="--value:100;">{{item.position}}</div>
         </div>
       </div>
     </div>
   </div>
+  <footerp />
 </template>
+
 <script>
 export default {
 
