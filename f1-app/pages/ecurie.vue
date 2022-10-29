@@ -1,4 +1,6 @@
 <template>
+  <html data-theme="cupcake"></html>
+
 <bar />
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
