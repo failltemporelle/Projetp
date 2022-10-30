@@ -49,13 +49,9 @@ export default {
   }
 }
 
-</script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVWP8Y7WS9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EVWP8Y7WS9');
+gtag('config', 'G-EVWP8Y7WS9');
 </script>
