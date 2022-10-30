@@ -4,7 +4,7 @@
     <div class="flex flex-row flex-wrap place-content-center">
       <div
         v-for="item in this.f1.points"
-        class="card w-60 bg-error shadow-xl ml-6 mt-6"
+        class="card w-60 bg-red-700 shadow-xl ml-6 mt-6"
       >
         <div class="card-body">
           <p>{{item.Driver.givenName}} {{item.Driver.familyName}}</p>
@@ -17,11 +17,6 @@
 
 <script>
 
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-EVWP8Y7WS9');
 export default {
   
 
