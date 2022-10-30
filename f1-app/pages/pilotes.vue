@@ -1,40 +1,59 @@
 <template>
   <bar />
-  <div>
-    <div class="flex flex-row flex-wrap place-content-center">
-      <!-- <div  v-for="item in this.f1.points" class="indicator">
-      <span class="indicator-item badge badge-primary">{{item.points}}</span>
-      <div class="card w-96 bg-primary ml-6 mt-6">
-        <div class="card-body">
-          <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
-          <p>{{ item.Driver.driverId }}</p>
-          <p>{{ item.points }} Points</p>
-          <div class="card-actions ml-6 mt-6">
-            <button class="btn">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-      <div
-        v-for="item in this.f1.points"
-        class="card w-60 bg-red-700 shadow-xl ml-6 mt-6"
-      >
-        <span class="indicator-item badge badge-primary">{{
-          item.points
-        }}</span>
-        <div class="card-body">
-          <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
-          <p>{{ item.Driver.driverId }}</p>
-          <p>{{ item.points }} Points</p>
-          <nuxt-img src="f1-app/assets/hamilton.jpg" />
-
-        </div>
-        <!-- <nuxt-img src="require(`~/assets/img/${item.Driver.driverId}.jpg`)" /> -->
-
+  <div class="flex flex-row flex-wrap place-content-center">
+    <div v-for="item in this.f1.points" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
+      <span class="indicator-item badge badge-primary text-teal-50" >{{ item.points }} Points  </span>
+      <div class="card-body">
+        <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
+        <!-- <p>{{ item.Driver.driverId }}</p> -->
       </div>
     </div>
   </div>
+
+
+  <div class="overflow-x-auto ml-9 mt-6">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+      <tr v-for="item in this.f1.points">
+        <td>{{item.position}}</td>
+        <td>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</td>
+        <th>{{item.points}}</th>
+      </tr>
+    </tbody>
+  </table>
+  </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </template>
+
+
+
+
+
+
+
+
+
 
 <script>
 export default {
