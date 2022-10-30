@@ -8,8 +8,10 @@
       >
         <div class="card-body">
           <p>{{item.Driver.givenName}} {{item.Driver.familyName}}</p>
+           <p>{{item.Driver.driverId}}</p>
           <p>{{ item.points }} Points</p>
         </div>
+        <img  src=@/assets/hamilton.jpg>
       </div>
     </div>
   </div>
