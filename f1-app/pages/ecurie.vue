@@ -1,20 +1,14 @@
 <template>
-  <html data-theme="cupcake"></html>
-
-<bar />
+  <bar />
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
       <div
         v-for="item in this.f1.ecuries"
-        class="card w-96 bg-base-100 shadow-xl ml-6 mt-6"
+        class="card w-60 bg-red-700 shadow-xl ml-6 mt-6"
       >
         <div class="card-body">
           <p class="font-bold">{{ item.Constructor.name }}</p>
           <p>Points: {{ item.points }}</p>
-          <div class="radial-progress text-primary" style="--value:100;">{{item.position}}</div>
-          <progress class="progress w-56" value="{{item.points}}" max="700"></progress>
-          <progress class="progress w-56" value= item.points max="700"></progress>
-          <progress class="progress w-56" value="item.points" max="700"></progress>
         </div>
       </div>
     </div>
@@ -22,8 +16,8 @@
 </template>
 <script>
 export default {
-  created(){
-    this.getpointE()
+  created() {
+    this.getpointE();
   },
   data() {
     return {

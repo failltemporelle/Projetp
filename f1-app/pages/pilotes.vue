@@ -1,18 +1,14 @@
-<template>
-  <html data-theme="cupcake"></html>
-
-      <bar />
+<template data-theme="cupcake">
+  <bar />
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
       <div
         v-for="item in this.f1.points"
-        class="card w-96 bg-base-100 shadow-xl ml-6 mt-6"
+        class="card w-60 bg-error shadow-xl ml-6 mt-6"
       >
         <div class="card-body">
           <p>{{item.Driver.givenName}} {{item.Driver.familyName}}</p>
           <p>{{ item.points }} Points</p>
-          <p>Position au classement : {{ item.position }}</p>
-          <div class="radial-progress text-primary" style="--value:100;">{{item.position}}</div>
         </div>
       </div>
     </div>
