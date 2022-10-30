@@ -5,9 +5,9 @@
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-center text-neutral-content">
     <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <h1 class="mb-5 text-5xl font-bold"></h1>
       <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-succes" @click="goPilotesPage()">Get Started</button>
+      <button class="btn btn-succes" @click="goPilotesPage()">Pilotes</button>
     </div>
   </div>
 </div>
@@ -18,7 +18,7 @@ export default {
   methods : {
 
     goPilotesPage() {
-      this.$router.push('/pilotes')
+      window.location.href = "https://projectf1.vercel.app/pilotes"
     },
   }
 }
