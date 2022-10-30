@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost normal-case text-xl">Formula one</a>
+    <a class="btn btn-ghost normal-case text-xl" @click="goHomePage()">Formula one</a>
   </div>
   <div class="navbar-end">
     <button class="btn btn-ghost btn-circle">
