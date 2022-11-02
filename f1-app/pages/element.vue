@@ -10,16 +10,11 @@
                     <p> {{ item.cpkHexColor }}</p>
                     <p> {{ item.symbol }}</p>
                     <p> {{ item.groupBlock }}</p>
-
-
                     <a href="#my-modal-2" class="btn">View element</a>
                     <!-- Put this part before </body> tag -->
                     <div class="modal" id="my-modal-2">
                         <div class="modal-box">
-                            <h1> C'est du {{item.name}}</h1>
-                            <img src ="@/assets/carbon.png"/>
-                            
-                            
+                            <h1> C'est du {{item.name}}</h1>     
                             <div class="modal-action">
                                 <a href="#" class="btn">Yay!</a>
                             </div>
