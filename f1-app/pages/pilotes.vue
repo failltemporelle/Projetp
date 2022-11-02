@@ -1,5 +1,5 @@
 <template>
-  <bar />
+  <navbar />
   <div class="flex flex-row flex-wrap place-content-center">
     <div v-for="item in this.f1.points" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
       <span class="indicator-item badge badge-primary text-teal-50" >{{ item.points }} Points  </span>
@@ -11,11 +11,11 @@
   </div>
 
 
-  <div class="overflow-x-auto ml-9 mt-6">
-  <table class="table">
+  <div class="overflow-x-auto ml-9 mt-6 border-stone-800">
+  <table class="table border-stone-800">
     <!-- head -->
-    <thead>
-      <tr>
+    <thead class="border-stone-800">
+      <tr class="border-stone-800">
         <th>Position</th>
         <th>Name</th>
         <th>Points</th>
@@ -45,14 +45,6 @@
 
 
 </template>
-
-
-
-
-
-
-
-
 
 
 <script>

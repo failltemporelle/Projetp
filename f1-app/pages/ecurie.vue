@@ -1,5 +1,5 @@
 <template>
-  <bar />
+  <navbar />
   <div>
     <div class="flex flex-row flex-wrap place-content-center">
       <div
