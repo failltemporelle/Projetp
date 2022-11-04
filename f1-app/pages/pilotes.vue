@@ -6,44 +6,9 @@
       <div class="card-body">
         <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
         <progress class="progress w-50" :value= item.points max="416"></progress>
-
-        <!-- <p>{{ item.Driver.driverId }}</p> -->
       </div>
     </div>
   </div>
-
-
-  <!-- <div class="overflow-x-auto ml-9 mt-6 border-stone-800">
-  <table class="table border-stone-800">
- 
-    <thead class="border-stone-800">
-      <tr class="border-stone-800">
-        <th>Position</th>
-        <th>Name</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="item in this.f1.points">
-        <td>{{item.position}}</td>
-        <td>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</td>
-        <th>{{item.points}}</th>
-      </tr>
-    </tbody>
-  </table>
-  </div>   -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 </template>
 
