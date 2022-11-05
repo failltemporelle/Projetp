@@ -9,7 +9,6 @@
         <li><a @click="goHomePage">Home</a></li>
         <li><a @click="goPilotesPage()">Pilotes</a></li>
         <li><a @click="goEcuriePage()">Ecuries</a></li>
-        <li><a @click="element()"> Elements</a></li>
         <li><a @click="course()">Courses</a></li>
        
       </ul>
@@ -51,10 +50,6 @@ export default {
 
     goHomePage() {
       window.location.href = "https://projectf1.vercel.app/"
-    },
-
-    element() {
-      window.location.href = "https://projectf1.vercel.app/element"
     },
 
   }

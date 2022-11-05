@@ -1,13 +1,29 @@
 <template>
     <navbar />
-    <div v-for="item in this.f1.course">
-        <p> {{item.raceName}}</p>
-        <p> {{item.date}}</p>
-        <p> {{item.round}}</p>
-        <p> {{item.season}}</p>
-    
-    
 
+
+    <div class="flex flex-row flex-wrap place-content-center">
+        <div v-for="item in this.f1.course" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
+            <div class="card-body">
+                <p> {{ item.raceName }}</p>
+                <p> {{ item.date }}</p>
+                <p> {{ item.round }}</p>
+                <p> {{ item.season }}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex flex-row flex-wrap place-content-center">
+        <div v-for="item in this.f1.classement" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
+            <div class="card-body">
+                <p> {{ item.Constructor.name }}</p>
+                <p> {{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
+                <p> {{ item.grid }}</p>
+                <p> {{ item.position }}</p>
+                <p> {{ item.status}}</p>
+            </div>
+        </div>
     </div>
 
 </template>
@@ -23,6 +39,7 @@ export default {
         return {
             f1: {
                 course: [],
+                classement: [],
             },
         };
     },
@@ -34,10 +51,11 @@ export default {
                 .then((response) => response.json())
                 .then((data) => {
                     this.f1.course = data.MRData.RaceTable.Races;
-                    this.f1.position = data.MRData.RaceTable.Races[0].Results[1].grid; 
-                    console.log(this.f1.position);
-                    
-                                });
+                    this.f1.classement = data.MRData.RaceTable.Races[0].Results;
+                    console.log(this.f1.classement);
+
+                });
+
         },
     },
 };
