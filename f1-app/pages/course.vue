@@ -47,7 +47,7 @@ export default {
     methods: {
         getCourse() {
             this.f1.course = [];
-            fetch("http://ergast.com/api/f1/current/last/results.json")
+            fetch("https://ergast.com/api/f1/current/last/results.json")
                 .then((response) => response.json())
                 .then((data) => {
                     this.f1.course = data.MRData.RaceTable.Races;
