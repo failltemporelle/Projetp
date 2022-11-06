@@ -6,16 +6,11 @@
       <div class="card-body">
         <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
         <progress class="progress w-50" :value=item.points max="416"></progress>
-        <p> {{ item.Driver.driverId }}</p>
-
-        <!-- <img :src="`/nuxt/assets/${item.Driver.driverId}.png`"/> -->
-        <img :src="`f1-app/assets/hamilton.png`"/>
+        <img :src="`/_nuxt/assets/pilotes/${item.Driver.driverId}.png`">
       </div>
     </div>
   </div>
 </template>
-
-
 <script>
 export default {
   created() {

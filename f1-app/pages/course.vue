@@ -21,15 +21,11 @@
                 <p> {{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
                 <p> Position départ : {{ item.grid }} Position arrivée : {{ item.position }}</p>
                 <p> {{ item.status }}</p>
-                <p> tour : {{item.FastestLap.lap}}</p>
-                <p> Rank : {{item.FastestLap.rank}}</p>
-                <p> LOP : {{item.FastestLap[0].AverageSpeed.rank}}</p> 
+                <p> tour : {{ item.FastestLap.lap }}</p>
+                <p> Rank : {{ item.FastestLap.rank }}</p>
             </div>
         </div>
     </div>
-
-
-
 </template>
 
 
@@ -58,7 +54,6 @@ export default {
                     this.f1.course = data.MRData.RaceTable.Races;
                     this.f1.classement = data.MRData.RaceTable.Races[0].Results;
                 });
-
         },
     },
 };

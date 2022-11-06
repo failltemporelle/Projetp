@@ -6,4 +6,7 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ],
 })
