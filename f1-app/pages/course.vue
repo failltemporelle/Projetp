@@ -17,14 +17,18 @@
     <div class="flex flex-row flex-wrap place-content-center">
         <div v-for="item in this.f1.classement" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
             <div class="card-body">
-                <p> {{ item.Constructor.name }}</p>
+                <!-- <p> {{ item.Constructor.name }}</p> -->
                 <p> {{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
-                <p> {{ item.grid }}</p>
-                <p> {{ item.position }}</p>
-                <p> {{ item.status}}</p>
+                <p> Position départ : {{ item.grid }} Position arrivée : {{ item.position }}</p>
+                <p> {{ item.status }}</p>
+                <p> tour : {{item.FastestLap.lap}}</p>
+                <p> Rank : {{item.FastestLap.rank}}</p>
+                <p> LOP : {{item.FastestLap[0].AverageSpeed.rank}}</p> 
             </div>
         </div>
     </div>
+
+
 
 </template>
 
@@ -40,6 +44,7 @@ export default {
             f1: {
                 course: [],
                 classement: [],
+                temps: [],
             },
         };
     },
@@ -52,8 +57,6 @@ export default {
                 .then((data) => {
                     this.f1.course = data.MRData.RaceTable.Races;
                     this.f1.classement = data.MRData.RaceTable.Races[0].Results;
-                    console.log(this.f1.classement);
-
                 });
 
         },

@@ -9,7 +9,9 @@
         <li><a @click="goHomePage">Home</a></li>
         <li><a @click="goPilotesPage()">Pilotes</a></li>
         <li><a @click="goEcuriePage()">Ecuries</a></li>
-        <li><a @click="course()">Courses</a></li>
+        <div v-for="item in this.f1.course">
+        <li><a @click="course()">Courses : {{ item.raceName }}</a></li>
+      </div>
        
       </ul>
     </div>
@@ -34,7 +36,36 @@
 
 <script>
 export default {
+
+
+  created() {
+        this.getCourse();
+    },
+    data() {
+        return {
+            f1: {
+                course: [],
+            },
+        };
+    },
+
+
+
+
+
   methods : {
+    getCourse() {
+            this.f1.course = [];
+            fetch("https://ergast.com/api/f1/current/last/results.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.f1.course = data.MRData.RaceTable.Races;
+                    this.f1.classement = data.MRData.RaceTable.Races[0].Results;
+                    console.log(this.f1.classement);
+
+                });
+
+        },
 
     goPilotesPage() {
       window.location.href = "https://projectf1.vercel.app/pilotes"
@@ -56,3 +87,4 @@ export default {
 }
 
 </script>
+
