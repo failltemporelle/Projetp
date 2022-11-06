@@ -6,7 +6,12 @@
       <div class="card-body">
         <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
         <progress class="progress w-50" :value=item.points max="416"></progress>
-        <img :src="`https://raw.githubusercontent.com/failltemporelle/Projetp/main/f1-app/assets/pilotes/${item.Driver.driverId}.png`">
+        <div class="avatar">
+          <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <img
+              :src="`https://raw.githubusercontent.com/failltemporelle/Projetp/main/f1-app/assets/pilotes/${item.Driver.driverId}.png`">
+          </div>
+        </div>
       </div>
     </div>
   </div>
