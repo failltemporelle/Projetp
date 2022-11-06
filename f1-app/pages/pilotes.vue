@@ -6,7 +6,7 @@
       <div class="card-body">
         <p>{{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
         <progress class="progress w-50" :value=item.points max="416"></progress>
-        <img :src="`/_nuxt/assets/pilotes/${item.Driver.driverId}.png`">
+        <img :src="`https://raw.githubusercontent.com/failltemporelle/Projetp/main/f1-app/assets/pilotes/${item.Driver.driverId}.png`">
       </div>
     </div>
   </div>
