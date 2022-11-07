@@ -23,6 +23,9 @@
                 <p> {{ item.status }}</p>
                 <p> tour : {{ item.FastestLap.lap }}</p>
                 <p> Rank : {{ item.FastestLap.rank }}</p>
+                <p> Time : {{ item.FastestLap.Time.time }}</p>
+                <p> Average Speed : {{ item.FastestLap.AverageSpeed.speed }} {{item.FastestLap.AverageSpeed.units}}</p>
+
             </div>
         </div>
     </div>
