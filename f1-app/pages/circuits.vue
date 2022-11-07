@@ -1,10 +1,13 @@
 <template>
-
+<Navbar />
 
 <div class="flex flex-row flex-wrap place-content-center">
         <div v-for="item in this.f1.course" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
             <div class="card-body">
-                <p> {{ item.circuitId }}</p>
+                <p> {{ item.circuitName }}</p>
+                <p> {{item.Location.locality}}</p>
+                <p> {{item.Location.country}}</p>
+
             </div>
         </div>
     </div>
@@ -35,7 +38,7 @@ export default {
     },
 
     methods: {
-        getCourse() {
+        getCircuit() {
             this.f1.course = [];
             fetch("http://ergast.com/api/f1/2022/circuits.json")
                 .then((response) => response.json())

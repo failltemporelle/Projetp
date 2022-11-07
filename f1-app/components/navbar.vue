@@ -11,6 +11,7 @@
         <li><a @click="goEcuriePage()">Ecuries</a></li>
         <div v-for="item in this.f1.course">
         <li><a @click="course()">Courses : {{ item.raceName }}</a></li>
+        <li> <a @click="goCircuits()"> Circuits</a></li>
       </div>
        
       </ul>
@@ -82,6 +83,10 @@ export default {
     goHomePage() {
       window.location.href = "https://projectf1.vercel.app/"
     },
+
+    goCircuits() {
+      window.location.href = "https://projectf1.vercel.app/circuits"
+    }
 
   }
 }
