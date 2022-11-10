@@ -7,7 +7,6 @@
                 <p> {{ item.circuitName }}</p>
                 <p> {{item.Location.locality}}</p>
                 <p> {{item.Location.country}}</p>
-
             </div>
         </div>
     </div>
