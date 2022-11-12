@@ -22,7 +22,7 @@
                         <input type="password" placeholder="password" class="input input-bordered" />
                     </div>
                     <div class="form-control mt-6">
-                        <button class="btn btn-primary" @click="loginwithfirebase()">Login</button>
+                        <button class="btn btn-primary" @click="createUser()">Login</button>
                         <button class="btn btn-primary mt-6">create account</button>
                     </div>
                 </div>
@@ -35,24 +35,18 @@
 
 <script>
 
-
 export default {
-    methods: {
-
-
-        loginwithfrebase() {
-            const firebaseConfig = {
-                apiKey: "AIzaSyD85IkpvL-5w8SwBREfc60cfZENVaYxW3s",
-                authDomain: "projet-d3942.firebaseapp.com",
-                projectId: "projet-d3942",
-                storageBucket: "projet-d3942.appspot.com",
-                messagingSenderId: "442188871962",
-                appId: "1:442188871962:web:9d57e23cbd5b975b04d4a3",
-                measurementId: "G-STTTL46CFM"
-            };
-
-
-        }
-    },
+  methods: {
+    async createUser() {
+      try {
+        await this.$fire.auth.createUserWithEmailAndPassword(
+          'test@gmail.com',
+          '123456'
+        )
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
 }
 </script>
