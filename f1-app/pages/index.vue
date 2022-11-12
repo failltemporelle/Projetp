@@ -7,7 +7,7 @@
     <div class="max-w-md">
       <h1 class="mb-5 text-5xl font-bold"></h1>
       <p class="mb-5">Toutes les informations sur la saison de f1 en cours</p>
-      <button class="btn btn-succes" @click="goPilotesPage()">Pilotes</button>
+      <button class="btn btn-succes" @click="Connect()">Connexion</button>
       
     </div>
   </div>
@@ -19,7 +19,7 @@ export default {
   methods : {
 
     goPilotesPage() {
-      window.location.href = "https://projectf1.vercel.app/pilotes"
+      window.location.href = "https://projectf1.vercel.app/connect";
     },
   }
 }

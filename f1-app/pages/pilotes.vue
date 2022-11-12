@@ -37,7 +37,7 @@ export default {
       fetch("https://ergast.com/api/f1/2022/driverStandings.json")
         .then((response) => response.json())
         .then((data) => {
-          this.f1.points =   data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+          this.f1.points = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
           this.f1.pointMax = data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].points;
           console.log(this.f1.pointMax);
           console.log(this.f1.points);

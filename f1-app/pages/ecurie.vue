@@ -5,9 +5,14 @@
       <div v-for="item in this.f1.ecuries" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
         <span class="indicator-item badge badge-primary text-teal-50 content-end">{{ item.points }} Points </span>
         <div class="card-body">
-          <p class="font-bold">{{ item.Constructor.name }}</p> 
-          <progress class="progress w-50" :value=item.points max="696"/>
-          <img :src="`https://raw.githubusercontent.com/failltemporelle/Projetp/main/f1-app/assets/ecuries/${item.Constructor.constructorId}.png`">
+          <p class="font-bold">{{ item.Constructor.name }}</p>
+          <progress class="progress w-50" :value=item.points max="696" />
+          <div class="avatar">
+            <div class="w-60 mask mask-squircle">
+              <img
+                :src="`https://raw.githubusercontent.com/failltemporelle/Projetp/main/f1-app/assets/ecuries/${item.Constructor.constructorId}.png`">
+            </div>
+          </div>
         </div>
       </div>
     </div>
