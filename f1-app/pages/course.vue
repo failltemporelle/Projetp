@@ -18,13 +18,14 @@
         <div v-for="item in this.f1.classement" class="card w-60 bg-red-700 shadow-xl ml-6 mt-6">
             <span class="indicator-item badge badge-primary text-teal-50 content-end"> Arrivé : {{ item.position }} Départ : {{item.grid}} </span>
             <div class="card-body">
-                <!-- <p> {{ item.Constructor.name }}</p> -->
+                <p> {{ item.Constructor.name }}</p>
                 <p class="font-bold"> {{ item.Driver.givenName }} {{ item.Driver.familyName }}</p>
                 <p> {{ item.status }}</p>
-                <p> tour : {{ item.FastestLap.lap }}</p>
-                <p> Rank : {{ item.FastestLap.rank }}</p>
+                <!-- <p> tour : {{item.FastestLap[0].lap}} </p> -->
+                <!-- <p> tour : {{ item.FastestLap.lap }}</p> -->
+                <!-- <p> Rank : {{ item.FastestLap.rank }}</p>
                 <p> Time : {{ item.FastestLap.Time.time }}</p>
-                <p> Average Speed : {{ item.FastestLap.AverageSpeed.speed }} {{item.FastestLap.AverageSpeed.units}}</p>
+                <p> Average Speed : {{ item.FastestLap.AverageSpeed.speed }} {{item.FastestLap.AverageSpeed.units}}</p> -->
 
             </div>
         </div>
@@ -56,6 +57,7 @@ export default {
                 .then((data) => {
                     this.f1.course = data.MRData.RaceTable.Races;
                     this.f1.classement = data.MRData.RaceTable.Races[0].Results;
+                    console.log(this.f1.classement);
                 });
         },
     },
